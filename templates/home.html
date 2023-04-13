@@ -10,30 +10,44 @@
         #banner{
             height: 360px;
             width: 100%;
+            object-fit: cover;
+            margin-bottom: 16px;
         }
     </style>
 </head>
 <body>
+    {% include 'nav.html ' %}
+    <img class="img-fluid" id="banner" src="http://192.168.137.36:5000/static/bannner.jpg" >
     <div class="container">
-    <h1 class="text-center mt-2 mb-4 "> {{company_name}} Carrers</h1>
-    <img class="img-fluid" id="banner" src="http://192.168.137.36:5000/static/carrer.jpg" >
-    <h2 class="text-center">About Jovian</h2>
+    <h1 class="text-center mt-2 mb-4"> <b>{{company_name}} Carrers</b></h1>
+    <div class="row">
+        <div class="col-md-6">
     <p class="lead">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+         It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+         publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </p>
-    <h2 class="text-center mt-2 mb-4">Open positions</h2>
-    <P> 
+        </div>
+   <div class="col-md-6">
+    <img src="/static/lead.jpg" style="height: 320px; border-radius: 4px;">  
+     </div>  
+   </div>
+    <h2 class="text-center mt-2 mb-4"><u>Open positions</u></h2>
+    <div>
         {% for job in jobs %}
           {% include 'jobitem.html' %}
             {% endfor %}
-        </div>
-    </P>
+    </div>
     <div class="text-center">
-    <button class="btn btn-primary btn-lg">Contact us</button>
+        <a href="mailto:akjain3005@gmail.com?subject=Questions%20about%20job%20openings&body=%20My%20Name%20%3A%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20questions%20%3A%20%3Center%20your%20question%20here%3E" type="button" class="btn btn-primary btn-lg">Contact us</a>
     <p class=" text-center mt-4">
-        Copyright 2022,Jovian
+         Copyright 2022,Jovian
     </p>
     </div>
-    </div>
+</div>
+{% include 'footer.html' %}
 </body>
 </html>
