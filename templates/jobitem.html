@@ -18,13 +18,25 @@
 
     <div class="col-md-2" >
      <a  href="mailto:akjain3005@gmail.com?subject=Application%20for%20{{
-    job['title']}}body=%20My%20Name%20%3A%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20resume%20link%3A%3Cresume%20link%3E%0D%0A%0D%0AMy%20LinkedIn%20link%20%3A%20%3Clinkedin%20link%3E" type="button" class="btn-primary text-muted"  id="btn" >Apply  </a>  
+    job['title']}}body=%20My%20Name%20%3A%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20resume%20link%3A%3Cresume%20link%3E%0D%0A%0D%0AMy%20LinkedIn%20link%20%3A%20%3Clinkedin%20link%3E" type="button" class="gradient-btn text-muted"  >Apply  </a>  
      <style>
-        #btn{
-           position: absolute;
-           right: 100px;
-           top: 30px;
-         }
+        .gradient-btn{
+            background: linear-gradient(to right, #FF512F, #F09819);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            right: 100px;
+            top: 30px;
+            position: absolute;
+        }
+            .gradient-btn:hover {
+             box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+             transform: translateY(-2px);
+            }
        </style>
     </div> 
 
